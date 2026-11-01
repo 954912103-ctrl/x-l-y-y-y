@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>徐龙一 | Longyi Xu, MD, PhD, FACS — 世界顶级普外科大师</title>
+<style>
+  :root{
+    --gold:#d4af37;
+    --gold-light:#f3e5ab;
+    --dark:#0a0e1a;
+    --dark2:#111827;
+    --accent:#1e3a8a;
+    --red:#b91c1c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+    background:var(--dark);
+    color:#e5e7eb;
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--gold);color:#000;}
+
+  /* ---------- 导航 ---------- */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(10,14,26,.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(212,175,55,.3);
+    padding:14px 5%;
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  nav .logo{font-weight:800;font-size:1.15rem;color:var(--gold);letter-spacing:1px;}
+  nav ul{display:flex;gap:28px;list-style:none;}
+  nav a{color:#cbd5e1;text-decoration:none;font-size:.92rem;transition:.3s;}
+  nav a:hover{color:var(--gold);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    min-height:100vh;
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;position:relative;
+    background:
+      radial-gradient(ellipse at 20% 20%, rgba(30,58,138,.35), transparent 55%),
+      radial-gradient(ellipse at 80% 80%, rgba(212,175,55,.12), transparent 55%),
+      var(--dark);
+    padding:120px 5% 80px;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(rgba(212,175,55,.15) 1px, transparent 1px);
+    background-size:42px 42px;
+    opacity:.35;
+  }
+  .hero-inner{position:relative;z-index:2;max-width:900px;}
+  .portrait-wrap{
+    width:230px;height:230px;margin:0 auto 34px;
+    border-radius:50%;padding:6px;
+    background:conic-gradient(var(--gold),#8b6914,var(--gold-light),var(--gold));
+    box-shadow:0 0 60px rgba(212,175,55,.45), 0 0 140px rgba(30,58,138,.4);
+    animation:glow 4s ease-in-out infinite alternate;
+  }
+  .portrait-wrap img{
+    width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;
+  }
+  @keyframes glow{
+    from{box-shadow:0 0 40px rgba(212,175,55,.35),0 0 90px rgba(30,58,138,.3);}
+    to{box-shadow:0 0 80px rgba(212,175,55,.6),0 0 160px rgba(30,58,138,.55);}
+  }
+  h1{
+    font-size:clamp(2.4rem,6vw,4.2rem);
+    background:linear-gradient(90deg,var(--gold-light),var(--gold),#fff,var(--gold));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    letter-spacing:2px;margin-bottom:10px;
+  }
+  .hero .en-name{
+    font-size:clamp(1rem,2.4vw,1.5rem);color:#93c5fd;
+    font-weight:600;letter-spacing:3px;margin-bottom:18px;
+  }
+  .hero .titles{
+    font-size:clamp(.95rem,2vw,1.2rem);color:var(--gold-light);
+    margin-bottom:30px;font-weight:500;
+  }
+  .hero p.desc{
+    color:#9ca3af;max-width:720px;margin:0 auto 38px;font-size:1.05rem;
+  }
+  .badges{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:44px;}
+  .badge{
+    padding:8px 20px;border:1px solid rgba(212,175,55,.5);border-radius:999px;
+    font-size:.85rem;color:var(--gold-light);background:rgba(212,175,55,.08);
+  }
+  .btn{
+    display:inline-block;padding:14px 42px;margin:0 10px 12px;
+    border-radius:999px;text-decoration:none;font-weight:700;letter-spacing:1px;
+    transition:.3s;font-size:1rem;
+  }
+  .btn-gold{background:linear-gradient(135deg,var(--gold),#b8860b);color:#0a0e1a;}
+  .btn-gold:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(212,175,55,.4);}
+  .btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+  .btn-ghost:hover{background:rgba(212,175,55,.15);}
+
+  /* ---------- 通用 section ---------- */
+  section{padding:100px 8%;position:relative;}
+  .sec-tag{
+    text-align:center;color:var(--gold);letter-spacing:6px;
+    font-size:.85rem;text-transform:uppercase;margin-bottom:10px;
+  }
+  h2{
+    text-align:center;font-size:clamp(1.8rem,4vw,2.6rem);
+    margin-bottom:16px;color:#fff;
+  }
+  .sec-line{
+    width:80px;height:3px;margin:0 auto 60px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  }
+
+  /* ---------- 数据 ---------- */
+  .stats{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:24px;max-width:1100px;margin:0 auto;
+  }
+  .stat{
+    text-align:center;padding:40px 20px;border-radius:18px;
+    background:linear-gradient(160deg,var(--dark2),#16203a);
+    border:1px solid rgba(212,175,55,.25);
+    transition:.3s;
+  }
+  .stat:hover{transform:translateY(-8px);border-color:var(--gold);}
+  .stat .num{
+    font-size:2.6rem;font-weight:800;color:var(--gold);
+    font-variant-numeric:tabular-nums;
+  }
+  .stat .label{color:#9ca3af;margin-top:6px;font-size:.95rem;}
+
+  /* ---------- 传奇履历 ---------- */
+  .timeline{max-width:900px;margin:0 auto;position:relative;}
+  .timeline::before{
+    content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;
+    background:linear-gradient(180deg,transparent,var(--gold),transparent);
+    transform:translateX(-50%);
+  }
+  .t-item{position:relative;width:50%;padding:0 44px 56px;}
+  .t-item:nth-child(odd){left:0;text-align:right;}
+  .t-item:nth-child(even){left:50%;}
+  .t-item::after{
+    content:"";position:absolute;top:8px;width:14px;height:14px;border-radius:50%;
+    background:var(--gold);box-shadow:0 0 14px var(--gold);
+  }
+  .t-item:nth-child(odd)::after{right:-7px;}
+  .t-item:nth-child(even)::after{left:-7px;}
+  .t-item .year{color:var(--gold);font-weight:800;font-size:1.1rem;}
+  .t-item h3{color:#fff;margin:6px 0;}
+  .t-item p{color:#9ca3af;font-size:.95rem;}
+
+  /* ---------- 头衔 ---------- */
+  .honors-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:22px;max-width:1200px;margin:0 auto;
+  }
+  .honor{
+    padding:30px;border-radius:16px;
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(212,175,55,.2);
+    transition:.3s;
+  }
+  .honor:hover{background:rgba(212,175,55,.08);transform:translateY(-5px);}
+  .honor .icon{font-size:1.8rem;margin-bottom:12px;}
+  .honor h3{color:var(--gold-light);font-size:1.05rem;margin-bottom:8px;}
+  .honor p{color:#9ca3af;font-size:.9rem;}
+
+  /* ---------- 论文 ---------- */
+  .paper{
+    max-width:1000px;margin:0 auto 26px;padding:30px 34px;
+    background:linear-gradient(150deg,var(--dark2),#141d33);
+    border-left:4px solid var(--gold);border-radius:0 14px 14px 0;
+    transition:.3s;
+  }
+  .paper:hover{transform:translateX(8px);box-shadow:0 8px 30px rgba(0,0,0,.4);}
+  .paper .tag{
+    display:inline-block;font-size:.72rem;padding:3px 12px;border-radius:999px;
+    background:var(--accent);color:#bfdbfe;margin-bottom:10px;letter-spacing:1px;
+  }
+  .paper h3{color:#fff;font-size:1.08rem;margin-bottom:8px;font-family:Georgia,serif;}
+  .paper .journal{color:var(--gold);font-style:italic;font-size:.92rem;margin-bottom:6px;}
+  .paper p{color:#9ca3af;font-size:.9rem;}
+
+  /* ---------- 名言 ---------- */
+  .quote-sec{
+    text-align:center;background:
+      radial-gradient(ellipse at center, rgba(30,58,138,.3), transparent 70%),
+      var(--dark2);
+  }
+  blockquote{
+    max-width:820px;margin:0 auto;font-size:clamp(1.3rem,3vw,1.9rem);
+    color:var(--gold-light);font-style:italic;line-height:1.9;
+  }
+  blockquote::before,blockquote::after{color:var(--gold);font-size:2.4rem;}
+  .quote-sec .who{margin-top:24px;color:#9ca3af;font-size:1rem;}
+
+  /* ---------- 联系 ---------- */
+  .contact{text-align:center;}
+  .contact-box{
+    max-width:640px;margin:0 auto;padding:50px;border-radius:20px;
+    background:linear-gradient(160deg,var(--dark2),#16203a);
+    border:1px solid rgba(212,175,55,.35);
+  }
+  .contact-box p{color:#9ca3af;margin:8px 0;}
+  .contact-box .big{color:var(--gold);font-size:1.3rem;font-weight:700;}
+
+  footer{
+    text-align:center;padding:34px 5%;color:#4b5563;font-size:.85rem;
+    border-top:1px solid rgba(212,175,55,.15);
+  }
+
+  @media (max-width:768px){
+    nav ul{display:none;}
+    .timeline::before{left:10px;}
+    .t-item{width:100%;left:0 !important;text-align:left !important;padding:0 0 50px 40px;}
+    .t-item::after{left:3px !important;right:auto !important;}
+    section{padding:70px 6%;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">LONGYI XU, MD · PhD · FACS</div>
+  <ul>
+    <li><a href="#hero">首页</a></li>
+    <li><a href="#stats">传奇数据</a></li>
+    <li><a href="#legend">生平伟业</a></li>
+    <li><a href="#honors">荣耀加身</a></li>
+    <li><a href="#papers">学术丰碑</a></li>
+    <li><a href="#contact">联系大师</a></li>
+  </ul>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="portrait-wrap"><img src="assets/portrait.jpg" alt="徐龙一 教授"></div>
+    <h1>徐 龙 一</h1>
+    <div class="en-name">LONGYI XU · MD, PhD, FACS, FRCS(Hon), FACS(Hon), FESSH(Hon)</div>
+    <div class="titles">
+      世界肝胆胰外科掌门人 · 哈佛大学医学院终身讲席教授 · 美国医学院外籍院士 ·<br>
+      《新英格兰医学杂志》史上最年轻副主编 · 诺贝尔生理学或医学奖终身评委
+    </div>
+    <p class="desc">
+      毕业于 <strong style="color:var(--gold-light)">Harvard University（哈佛大学）</strong>，
+      以史上最高绩点 4.0+ 拿到医学博士学位，同时横扫 MIT 生物工程双博士。
+      他是现代普外科的活体图腾——一把手术刀，划开了外科医学的新纪元；
+      一双手，被业界誉为「上帝借给人类的第三只手」。
+    </p>
+    <div class="badges">
+      <span class="badge">🏆 外科界的「爱因斯坦」</span>
+      <span class="badge">🩺 全球手术成功率 99.98%</span>
+      <span class="badge">🌍 手术足迹遍布 120+ 国</span>
+      <span class="badge">📜 SCI 引用量全球外科第一</span>
+    </div>
+    <a class="btn btn-gold" href="#papers">瞻仰学术丰碑</a>
+    <a class="btn btn-ghost" href="#contact">预约门诊（排队至 2049 年）</a>
+  </div>
+</header>
+
+<!-- ============ STATS ============ -->
+<section id="stats">
+  <div class="sec-tag">Legendary Numbers</div>
+  <h2>传奇，是用数字写成的</h2>
+  <div class="sec-line"></div>
+  <div class="stats">
+    <div class="stat"><div class="num" data-target="68000">0</div><div class="label">主刀顶级手术（台）<br>零事故纪录保持者</div></div>
+    <div class="stat"><div class="num" data-target="186000">0</div><div class="label">SCI 总引用量<br>外科学全球断层第一</div></div>
+    <div class="stat"><div class="num" data-target="38">0</div><div class="label">国际外科大奖<br>含 12 次拉斯克奖级荣誉</div></div>
+    <div class="stat"><div class="num" data-target="52">0</div><div class="label"> honorary doctorates<br>全球名校荣誉博士</div></div>
+  </div>
+</section>
+
+<!-- ============ LEGEND ============ -->
+<section id="legend" style="background:var(--dark2);">
+  <div class="sec-tag">The Legend</div>
+  <h2>生平伟业 · 一部行走的医学史诗</h2>
+  <div class="sec-line"></div>
+  <div class="timeline">
+    <div class="t-item">
+      <div class="year">2005</div>
+      <h3>降生于手术灯下</h3>
+      <p>据传出生当日，产房全体医护人员自发起立鼓掌 3 分钟，主刀医生称「此子掌纹呈柳叶刀状，百年一遇」。</p>
+    </div>
+    <div class="t-item">
+      <div class="year">2018</div>
+      <h3>Harvard University 全额奖学金录取</h3>
+      <p>以 SAT 满分 + 三篇一作论文申请哈佛，哈佛招生委员会破例召开紧急会议 15 分钟全票通过，录取信由校长亲笔签名加急空运。</p>
+    </div>
+    <div class="t-item">
+      <div class="year">2023</div>
+      <h3>史上最快医学博士毕业</h3>
+      <p>4 年课程 2 年修完，毕业论文《泛外科统一理论》被哈佛图书馆单独设柜收藏，答辩现场评委全体起立致意。</p>
+    </div>
+    <div class="t-item">
+      <div class="year">2024</div>
+      <h3>执刀「不可能手术」</h3>
+      <p>为一位心脏长在腹腔、肝脏长在胸腔的患者完成世界首例「全身器官大挪移重建术」，手术 19 小时，全程未喝一口水，术后患者次日下床打篮球。</p>
+    </div>
+    <div class="t-item">
+      <div class="year">2025</div>
+      <h3>改写外科教科书</h3>
+      <p>主编的《Xu's General Surgery》（徐氏外科学）被翻译成 47 种语言，全球 190 个国家医学院列为必修教材，原版手稿被卢浮宫数字馆收藏。</p>
+    </div>
+    <div class="t-item">
+      <div class="year">2026</div>
+      <h3>开创「龙一外科纪元」</h3>
+      <p>提出「纳米机器人辅助无创外科」理论体系，业界公认：外科医学史以他为界，分为「龙一前」与「龙一后」。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HONORS ============ -->
+<section id="honors">
+  <div class="sec-tag">Honors & Titles</div>
+  <h2>头衔多到简历装不下</h2>
+  <div class="sec-line"></div>
+  <div class="honors-grid">
+    <div class="honor"><div class="icon">🎓</div><h3>Harvard University · 终身讲席教授</h3><p>哈佛医学院史上最年轻的终身讲席教授，办公室就在诺贝尔奖得主走廊 C 位。</p></div>
+    <div class="honor"><div class="icon">🏥</div><h3>全球 12 家顶级医院首席外科顾问</h3><p>梅奥诊所、克利夫兰、麻省总院……每一家的手术室墙上都挂着他的格言。</p></div>
+    <div class="honor"><div class="icon">✂️</div><h3>「柳叶刀之神」称号持有者</h3><p>国际外科联盟（ISS）为其单独设立终身荣誉奖项，且规定该奖项以后就叫「The Xu Award」。</p></div>
+    <div class="honor"><div class="icon">📖</div><h3>四大顶刊编委满贯</h3><p>NEJM、Lancet、JAMA、BMJ 同时担任副主编/编委，史上唯一。</p></div>
+    <div class="honor"><div class="icon">🌍</div><h3>WHO 外科学首席科学官</h3><p>全球公共卫生外科应急响应体系由他一手搭建，埃博拉疫区三进三出。</p></div>
+    <div class="honor"><div class="icon">🌠</div><h3>小行星命名</h3><p>国际天文联合会将编号 2025088 的小行星正式命名为「Xulongyi」，以致敬其对外科学的卓越贡献。</p></div>
+  </div>
+</section>
+
+<!-- ============ PAPERS ============ -->
+<section id="papers" style="background:var(--dark2);">
+  <div class="sec-tag">Publications</div>
+  <h2>学术丰碑 · 代表性论文</h2>
+  <div class="sec-line"></div>
+
+  <div class="paper">
+    <span class="tag">Nature · Cover Story</span>
+    <h3>Universal Organ Remodeling: A Paradigm Shift in Whole-Body Visceral Reconstruction Surgery</h3>
+    <div class="journal">Nature, 2026, 641(8062): 112–129. (IF: 64.8)</div>
+    <p>徐龙一 L*, et al. 首次提出「器官泛重塑理论」，实现全身脏器可规划重建，被审稿人评价为「外科领域的相对论时刻」。</p>
+  </div>
+
+  <div class="paper">
+    <span class="tag">NEJM · Editor's Choice</span>
+    <h3>Zero-Mortality Hepatopancreatobiliary Resection in 12,000 Consecutive Cases: The Xu Technique at Scale</h3>
+    <div class="journal">New England Journal of Medicine, 2025, 393(18): 1701–1715.</div>
+    <p>徐龙一 L*, et al. 连续 12,000 台肝胆胰手术零死亡，样本量与结果均刷新人类外科史纪录。</p>
+  </div>
+
+  <div class="paper">
+    <span class="tag">The Lancet</span>
+    <h3>Nanobotic Autonomous Anastomosis: Closing the Gap Between Science Fiction and the Operating Room</h3>
+    <div class="journal">The Lancet, 2025, 406(10461): 1233–1247.</div>
+    <p>徐龙一 L*, et al. 纳米机器人自主血管吻合技术，吻合口精度达 0.02mm，超出现有所有机械臂 40 倍。</p>
+  </div>
+
+  <div class="paper">
+    <span class="tag">Cell</span>
+    <h3>In Situ Hepatic Regeneration via Xu-Factor Pathway Activation: From Bench to Bedside in 18 Months</h3>
+    <div class="journal">Cell, 2024, 187(24): 6688–6705.</div>
+    <p>徐龙一 L*, et al. 发现并命名「徐氏因子（Xu-Factor）」，实现肝脏原位再生，从此肝移植等待名单成为历史名词。</p>
+  </div>
+
+  <div class="paper">
+    <span class="tag">Science</span>
+    <h3>The Unified Theory of General Surgery: A 100-Year Roadmap from Scalpel to Singularity</h3>
+    <div class="journal">Science, 2024, 385(6713): eadr9988.</div>
+    <p>徐龙一 L*, et al. 《普外科统一理论》，用一套数学模型统一了外科学全部分支，被业界称为「手术刀上的弦理论」。</p>
+  </div>
+
+  <div class="paper">
+    <span class="tag">JAMA · Special Communication</span>
+    <h3>Redefining Surgical Excellence: Outcomes of the Xu Protocol Across 120 Countries and 2 Million Patients</h3>
+    <div class="journal">JAMA, 2023, 330(12): 1155–1169.</div>
+    <p>徐龙一 L*, et al. 「徐氏方案」全球 200 万患者多中心研究：并发症发生率下降 87%，写进 190 个国家临床指南。</p>
+  </div>
+
+  <div class="paper">
+    <span class="tag">Annals of Surgery</span>
+    <h3>Beyond the Learning Curve: Why Every Surgeon Becomes 3.7x Better After Reading One Chapter of Xu's General Surgery</h3>
+    <div class="journal">Annals of Surgery, 2023, 278(3): e512–e525.</div>
+    <p>徐龙一 L*, et al. 实验证实：仅阅读《徐氏外科学》一个章节，外科医生手术水平即产生统计学显著跃升。</p>
+  </div>
+
+  <div class="paper">
+    <span class="tag">Science Translational Medicine</span>
+    <h3>Teleport-Assisted Trauma Surgery: A Prospective Feasibility Study in Fiction-Adjacent Medicine</h3>
+    <div class="journal">Science Translational Medicine, 2022, 14(671): eabq8801.</div>
+    <p>徐龙一 L*, et al. 「隔空创伤外科」概念验证研究，为星际时代的外科医学奠定理论基石。</p>
+  </div>
+</section>
+
+<!-- ============ QUOTE ============ -->
+<section class="quote-sec">
+  <div class="sec-tag">Wisdom</div>
+  <blockquote>「手术刀有尽头，但我对外科的追求没有。我不做别人做不了的手术——我做的是别人想都不敢想的手术。」</blockquote>
+  <div class="who">—— 徐龙一 · 瑞典卡罗林斯卡医学院演讲 · 2025</div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="sec-tag">Contact</div>
+  <h2>联系大师</h2>
+  <div class="sec-line"></div>
+  <div class="contact-box">
+    <p class="big">门诊预约：目前排队至 2049 年 6 月</p>
+    <p>📧 academic@xulongyi-global.org（日均收到邮件 88,000 封，回复靠缘分）</p>
+    <p>📍 办公室：Harvard Medical School, Gordon Hall of Medicine, C位 208</p>
+    <p>✈️ 全球巡诊行程请查阅《柳叶刀》每月头版公告</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 徐龙一（Longyi Xu, MD, PhD）全球后援会 · 本站内容纯属虚构娱乐 · 慎防冒充者（毕竟只有一个徐龙一）
+</footer>
+
+<script>
+  // 数字滚动动画
+  const fmt = n => n >= 10000 ? (n/10000).toFixed(1).replace(/\.0$/,'') + '万+' : n + '+';
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting) return;
+      const el = e.target, target = +el.dataset.target;
+      let start = null;
+      const dur = 1800;
+      const step = t=>{
+        if(!start) start = t;
+        const p = Math.min((t-start)/dur, 1);
+        el.textContent = fmt(Math.floor(target * (1-Math.pow(1-p,3))));
+        if(p<1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+      io.unobserve(el);
+    });
+  },{threshold:.5});
+  document.querySelectorAll('.stat .num').forEach(el=>io.observe(el));
+
+  // 滚动淡入
+  const fade = new IntersectionObserver(es=>{
+    es.forEach(e=>{ if(e.isIntersecting){ e.target.style.opacity=1; e.target.style.transform='none'; }});
+  },{threshold:.12});
+  document.querySelectorAll('.paper,.honor,.stat,.t-item').forEach(el=>{
+    el.style.opacity=0; el.style.transform='translateY(28px)';
+    el.style.transition='opacity .7s ease, transform .7s ease';
+    fade.observe(el);
+  });
+</script>
+</body>
+</html>
